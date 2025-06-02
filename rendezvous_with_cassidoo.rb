@@ -18,9 +18,7 @@ end
 
 # recursive
 def recursive_nestArray(arr)
-  if arr.empty?
-    return []
-  end
+  return arr if arr.length <= 1
   
   [arr[0], recursive_nestArray(arr[1..-1])]
 end
