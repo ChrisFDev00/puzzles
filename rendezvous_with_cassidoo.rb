@@ -23,12 +23,12 @@ def recursive_nestArray(arr)
   [arr[0], recursive_nestArray(arr[1..-1])]
 end
 
-p nestArray([1]) #=> [1]
-p nestArray([1, 2, 3, 4]) #=> [1, [2, [3, [4]]]]
-p nestArray([1, 2, 3, 4, 5, 6]) #=> [1, [2, [3, [4, [5, [6]]]]]]
+# p nestArray([1]) #=> [1]
+# p nestArray([1, 2, 3, 4]) #=> [1, [2, [3, [4]]]]
+# p nestArray([1, 2, 3, 4, 5, 6]) #=> [1, [2, [3, [4, [5, [6]]]]]]
 
-p recursive_nestArray([1]) #=> [1]
-p recursive_nestArray([1, 2, 3, 4]) #=> [1, [2, [3, [4]]]]
-p recursive_nestArray([1, 2, 3, 4, 5, 6]) #=> [1, [2, [3, [4, [5, [6]]]]]]
+# p recursive_nestArray([1]) #=> [1]
+# p recursive_nestArray([1, 2, 3, 4]) #=> [1, [2, [3, [4]]]]
+# p recursive_nestArray([1, 2, 3, 4, 5, 6]) #=> [1, [2, [3, [4, [5, [6]]]]]]
 
 #############################################################################
