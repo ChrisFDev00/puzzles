@@ -1,3 +1,4 @@
+########## Edition 407 ##########
 # Turn an array of integers into a nested array. 
 # You can think of this as the opposite of flattening an array!
 
@@ -31,4 +32,28 @@ end
 # p recursive_nestArray([1, 2, 3, 4]) #=> [1, [2, [3, [4]]]]
 # p recursive_nestArray([1, 2, 3, 4, 5, 6]) #=> [1, [2, [3, [4, [5, [6]]]]]]
 
-#############################################################################
+########## Edition 408 ##########
+# Given an array of strings representing a sequence of traffic light states ("red" for stop, "green" for go, "yellow" for slow), 
+# write a function that returns true if the sequence could represent a valid state machine for a standard traffic light. 
+# The only valid transitions are: red to green, green to yellow, and yellow to red. 
+
+def isValidTrafficSequence arr
+  return true if arr.empty?
+
+  sequence = {
+    "red" => "green",
+    "green" => "yellow", 
+    "yellow" => "red",
+  }
+
+  arr.each_cons(2) do |current_light, next_light|
+    expected_next = sequence.fetch(current_light, nil)
+    return false if next_light != expected_next
+  end
+  
+  true
+end
+
+# p isValidTrafficSequence([])
+# p isValidTrafficSequence(["red", "green", "yellow", "red", "green"])
+# p isValidTrafficSequence(["red", "yellow", "green"]);
