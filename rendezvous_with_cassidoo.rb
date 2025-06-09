@@ -54,6 +54,6 @@ def isValidTrafficSequence arr
   true
 end
 
-# p isValidTrafficSequence([])
-# p isValidTrafficSequence(["red", "green", "yellow", "red", "green"])
-# p isValidTrafficSequence(["red", "yellow", "green"]);
+# p isValidTrafficSequence([]) #=> true
+# p isValidTrafficSequence(["red", "green", "yellow", "red", "green"]) #=> false
+# p isValidTrafficSequence(["red", "yellow", "green"]) #=> true
